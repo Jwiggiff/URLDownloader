@@ -22,7 +22,7 @@ class DownloadController extends Controller {
    * @NoCSRFRequired
    */
 	public function getJobs() {
-    return new DataResponse($this->jobList=>getAll());
+    return new DataResponse($this->jobList->getAll());
 	}
 
   /**
