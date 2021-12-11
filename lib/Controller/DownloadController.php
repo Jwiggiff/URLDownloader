@@ -5,6 +5,7 @@ use OCA\URLDownloader\BackgroundJobs\DownloadJob;
 use OCP\IRequest;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Controller;
 use OCP\BackgroundJob\IJobList;
 
@@ -16,8 +17,12 @@ class DownloadController extends Controller {
 		$this->jobList = $jobList;
 	}
 
+  /**
+   * 
+   * @NoCSRFRequired
+   */
 	public function getJobs() {
-    return new DataResponse($this->jobList);
+    return new DataResponse($this->jobList=>getAll());
 	}
 
   /**
@@ -27,6 +32,8 @@ class DownloadController extends Controller {
   public function addJob(string $url, string $path) {
     $this->jobList->add(new DownloadJob(), ['url' => $url, 'path' => $path]);
 
-    return $this->getJobs();
+    $this->jobList->getNext()->execute($this->jobList);
+
+    return new RedirectResponse("/downloads");
   }
 }
