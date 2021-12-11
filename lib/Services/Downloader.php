@@ -9,9 +9,9 @@ class Downloader {
   public function __construct(string $url, string $path){
     $this->url = $url;
     $this->path = $path;
-    if(!file_exists($this->path)) {
-      $this->fp = fopen($this->path, "w");
-    }
+    // if(!file_exists($this->path)) {
+    $this->fp = fopen($this->path, "w");
+    // }
 	}
 
   public function run() {
