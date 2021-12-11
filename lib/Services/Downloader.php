@@ -15,13 +15,13 @@ class Downloader {
 	}
 
   public function run() {
-    ob_start();
+    // ob_start();
 
     echo "<pre>";
     echo "Loading ...";
 
-    ob_flush();
-    flush();
+    // ob_flush();
+    // flush();
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://stackoverflow.com/robots.txt");
@@ -40,15 +40,15 @@ class Downloader {
     fclose($this->fp);
 
     echo "Done";
-    ob_flush();
-    flush();
+    // ob_flush();
+    // flush();
   }
 
   public function progress($resource, $download_size, $downloaded, $upload_size, $uploaded) {
       if($download_size > 0)
           echo $downloaded / $download_size  * 100;
-      ob_flush();
-      flush();
+      // ob_flush();
+      // flush();
       sleep(1); // just to see effect
   }
 }
