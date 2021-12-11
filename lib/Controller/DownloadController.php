@@ -25,7 +25,6 @@ class DownloadController extends Controller {
    * @NoCSRFRequired
    */
   public function addJob(string $url, string $path) {
-    throw new \Exception("\$url = $url, \$path = $path");
     $this->jobList->add(new DownloadJob(), ['url' => $url, 'path' => $path]);
   }
 }
