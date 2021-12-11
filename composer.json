@@ -1,0 +1,15 @@
+{
+    "name": "U R L Downloader",
+    "description": "An app to download files from a URL",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Josh"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
