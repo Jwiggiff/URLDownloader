@@ -31,7 +31,6 @@ class PageController extends Controller {
 	/**
 	 * Download file from $url to $path
 	 * 
-	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 * 
 	 * @param string $url
