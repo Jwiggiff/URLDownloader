@@ -3,9 +3,13 @@ namespace OCA\URLDownloader\Services;
 
 class Downloader {
   private $fp;
+  private $url;
+  private $path;
 
-  public function __construct(){
-		$this->fp = fopen("test.txt", "w+");
+  public function __construct(string $url, string $path){
+    $this->url = $url;
+    $this->path = $path;
+		$this->fp = fopen($this->path, "w+");
 	}
 
   public function run(string $url, string $path) {
