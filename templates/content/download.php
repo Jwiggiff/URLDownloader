@@ -1,8 +1,10 @@
 <?php
 use OCA\URLDownloader\Services\Downloader;
 
-echo "test";
+echo "test <br>";
 
-$d = new Downloader("url", "/test.txt");
+echo __DIR__;
+
+$d = new Downloader("url", __DIR__."/test.txt");
 
 echo $d->run();
