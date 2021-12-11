@@ -26,5 +26,7 @@ class DownloadController extends Controller {
    */
   public function addJob(string $url, string $path) {
     $this->jobList->add(new DownloadJob(), ['url' => $url, 'path' => $path]);
+
+    return getJobs();
   }
 }
