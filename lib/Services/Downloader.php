@@ -24,7 +24,7 @@ class Downloader {
     // flush();
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://stackoverflow.com/robots.txt");
+    curl_setopt($ch, CURLOPT_URL, $this->url);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
     // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
