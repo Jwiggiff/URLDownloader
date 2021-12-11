@@ -10,6 +10,7 @@
 return [
     'routes' => [
 	   ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
-	   ['name' => 'page#download', 'url' => '/download', 'verb' => 'POST'],
+	   ['name' => 'download#addJob', 'url' => '/download', 'verb' => 'POST'],
+	   ['name' => 'download#getJobs', 'url' => '/downloads', 'verb' => 'GET'],
     ]
 ];

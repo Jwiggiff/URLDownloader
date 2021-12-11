@@ -1,8 +1,6 @@
 <?php
 use OCA\URLDownloader\Services\Downloader;
 
-echo "test <br>";
+$d = new DownloadService();
 
-$d = new Downloader($_['url'], $_['path']);
-
-echo $d->run();
+echo $d->run($_['url'], $_['path']);

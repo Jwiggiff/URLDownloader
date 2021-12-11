@@ -1,20 +1,18 @@
 <?php
 namespace OCA\URLDownloader\Services;
 
-class Downloader {
-  private $fp;
-  private $url;
-  private $path;
+class DownloadService {
+  // private $fp;
 
-  public function __construct(string $url, string $path){
-    $this->url = $url;
-    $this->path = $path;
+  public function __construct(){
     // if(!file_exists($this->path)) {
-    $this->fp = fopen($this->path, "w");
+    // $this->fp = fopen($this->path, "w");
     // }
 	}
 
-  public function run() {
+  public function run(string $url, string $path) {
+    $fp = fopen($path, "w");
+
     // ob_start();
 
     echo "<pre>";
@@ -24,12 +22,12 @@ class Downloader {
     // flush();
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $this->url);
+    curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
     // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    curl_setopt($ch, CURLOPT_FILE, $this->fp);
+    curl_setopt($ch, CURLOPT_FILE, $fp);
     curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, array($this, 'progress'));
     // curl_setopt($ch, CURLOPT_WRITEFUNCTION, 'writeFile');
     curl_setopt($ch, CURLOPT_NOPROGRESS, false); // needed to make progress function work
@@ -37,7 +35,7 @@ class Downloader {
     curl_exec($ch);
 
     curl_close($ch);
-    fclose($this->fp);
+    fclose($fp);
 
     echo "Done";
     // ob_flush();
