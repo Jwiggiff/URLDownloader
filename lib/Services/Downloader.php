@@ -30,9 +30,9 @@ class Downloader {
     // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     curl_setopt($ch, CURLOPT_FILE, $this->fp);
-    // curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress');
+    curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress');
     // curl_setopt($ch, CURLOPT_WRITEFUNCTION, 'writeFile');
-    // curl_setopt($ch, CURLOPT_NOPROGRESS, false); // needed to make progress function work
+    curl_setopt($ch, CURLOPT_NOPROGRESS, false); // needed to make progress function work
 
     curl_exec($ch);
 
