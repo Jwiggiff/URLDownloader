@@ -28,4 +28,14 @@ class PageController extends Controller {
 		return new TemplateResponse('urldownloader', 'index');  // templates/index.php
 	}
 
+	/**
+	 * Download file from $url to $path
+	 * 
+	 * @param string $url
+	 * @param string $path
+	 */
+	public function download(string $url, string $path) {
+		return new DataResponse("Nice Cock!");
+	}
+
 }
