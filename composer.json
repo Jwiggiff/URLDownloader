@@ -1,11 +1,11 @@
 {
-    "name": "U R L Downloader",
+    "name": "URLDownloader",
     "description": "An app to download files from a URL",
     "type": "project",
     "license": "AGPL",
     "authors": [
         {
-            "name": "Josh"
+            "name": "Josh Friedman"
         }
     ],
     "require": {},
