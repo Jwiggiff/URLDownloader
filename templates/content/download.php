@@ -5,4 +5,4 @@ echo "test";
 
 // $d = new Downloader();
 
-echo new Downloader()->run("abc", "123");
+echo new Downloader->run("abc", "123");
