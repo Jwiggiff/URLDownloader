@@ -1,13 +1,13 @@
 <?php
 use OCA\URLDownloader\Services\Downloader;
 
-echo "test";
+echo "test\n";
 
-echo $_SERVER['DOCUMENT_ROOT'];
+echo $_SERVER['DOCUMENT_ROOT']."\n";
 
-echo __DIR__;
+echo __DIR__."\n";
 
-echo getcwd();
+echo getcwd()."\n";
 
 $d = new Downloader("url", "/home/josh/test.txt");
 
