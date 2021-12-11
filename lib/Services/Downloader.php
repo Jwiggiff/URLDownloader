@@ -18,7 +18,7 @@ class Downloader {
     // ob_start();
 
     echo "<pre>";
-    echo "Loading ...";
+    echo "Loading ... \n";
 
     // ob_flush();
     // flush();
@@ -45,8 +45,11 @@ class Downloader {
   }
 
   public function progress($resource, $download_size, $downloaded, $upload_size, $uploaded) {
-    echo "Progress:";
-    echo $download_size;
+    echo "Progress:\n";
+    echo $download_size."\n";
+    echo $downloaded."\n";
+    echo $download_size."\n";
+    echo $download_size."\n";
     // if($download_size > 0)
     //     echo $downloaded / $download_size  * 100;
     // ob_flush();
