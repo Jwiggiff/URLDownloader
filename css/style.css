@@ -12,6 +12,7 @@ h1 {
 
 .input-group {
 	display: flex;
-	gap: 2rem;
+  align-items: center;
+	gap: 1rem;
 	margin-bottom: 2rem;
 }
