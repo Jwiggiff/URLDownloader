@@ -37,7 +37,7 @@ class Downloader {
     curl_exec($ch);
 
     curl_close($ch);
-    fclose($this->fp);
+    // fclose($this->fp);
 
 
     function writeFile($cp, $data) {
