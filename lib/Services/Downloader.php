@@ -1,5 +1,7 @@
 <?php
 
+namespace OCA\URLDownloader\Services;
+
 class Downloader {
   private $fp;
 

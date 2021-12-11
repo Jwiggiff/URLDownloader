@@ -1,6 +1,6 @@
 <?php
 
-use OCA\URLDownloader\Services\Downloader;
+use OCA\URLDownloader\Services;
 
 echo "test";
 
