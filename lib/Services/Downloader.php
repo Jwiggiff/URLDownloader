@@ -44,7 +44,7 @@ class Downloader {
     // flush();
   }
 
-  public function progress($resource, $download_size, $downloaded, $upload_size, $uploaded) {
+  public function progress($download_size, $downloaded, $upload_size, $uploaded) {
     echo "Progress:\n";
     echo $download_size."\n";
     echo $downloaded."\n";
