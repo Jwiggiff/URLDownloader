@@ -37,7 +37,8 @@ class PageController extends Controller {
 	 * @param string $path
 	 */
 	public function download(string $url, string $path) {
-		return new DataResponse("Nice Cock!\n" . $url . "\n" . $path);
+		// return new DataResponse("Nice Cock!\n" . $url . "\n" . $path);
+		return new TemplateResponse('urldownloader', 'download');
 	}
 
 }
