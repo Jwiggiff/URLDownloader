@@ -24,12 +24,12 @@ class Downloader {
     flush();
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://stackoverflow.com");
+    curl_setopt($ch, CURLOPT_URL, "https://stackoverflow.com/robots.txt");
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
     // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    // curl_setopt($ch, CURLOPT_FILE, STDOUT);
+    curl_setopt($ch, CURLOPT_FILE, $this->fp);
     // curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress');
     // curl_setopt($ch, CURLOPT_WRITEFUNCTION, 'writeFile');
     // curl_setopt($ch, CURLOPT_NOPROGRESS, false); // needed to make progress function work
@@ -37,7 +37,7 @@ class Downloader {
     curl_exec($ch);
 
     curl_close($ch);
-    // fclose($this->fp);
+    fclose($this->fp);
 
 
     function writeFile($cp, $data) {
