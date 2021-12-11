@@ -12,7 +12,7 @@ class Downloader {
 		$this->fp = fopen($this->path, "w+");
 	}
 
-  public function run(string $url, string $path) {
+  public function run() {
     ob_start();
 
     echo "<pre>";
