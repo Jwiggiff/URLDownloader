@@ -4,10 +4,10 @@ style('urldownloader', 'style');
 ?>
 
 <div id="app">
-	<!-- <div id="app-navigation">
+	<div id="app-navigation">
 		<?php print_unescaped($this->inc('navigation/index')); ?>
 		<?php print_unescaped($this->inc('settings/index')); ?>
-	</div> -->
+	</div>
 
 	<div id="app-content">
 		<div id="app-content-wrapper">
