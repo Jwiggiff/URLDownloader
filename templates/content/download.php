@@ -1,7 +1,7 @@
 <?php
 
-use OCA\URLDownloader\Services\Downloader
+use OCA\URLDownloader\Services\Downloader;
 
-echo("test");
+echo "test";
 
-echo(new Downloader()->run());
+// echo new Downloader()->run();
