@@ -1,6 +1,6 @@
 <h1>URL Downloader</h1>
 
-<form action="/download" method="POST">
+<form action="download" method="POST">
   <div class="input-group">
     <label for="url">URL:</label>
     <input type="text" id="url" name="url" placeholder="URL">
@@ -11,5 +11,5 @@
     <input type="text" id="path" name="path" placeholder="/path/to/file">
   </div>
 
-  <button type="button">Download</button>
+  <button>Download</button>
 </form>
