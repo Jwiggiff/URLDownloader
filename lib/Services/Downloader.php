@@ -25,14 +25,17 @@ class Downloader {
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "http://stackoverflow.com");
-    curl_setopt($ch, CURLOPT_FILE, $this->fp);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    // curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress');
-    curl_setopt($ch, CURLOPT_WRITEFUNCTION, 'writeFile');
-    curl_setopt($ch, CURLOPT_NOPROGRESS, false); // needed to make progress function work
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // curl_setopt($ch, CURLOPT_FILE, STDOUT);
+    // curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress');
+    // curl_setopt($ch, CURLOPT_WRITEFUNCTION, 'writeFile');
+    // curl_setopt($ch, CURLOPT_NOPROGRESS, false); // needed to make progress function work
+
     curl_exec($ch);
+
     curl_close($ch);
     fclose($this->fp);
 
