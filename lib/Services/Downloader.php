@@ -45,10 +45,12 @@ class Downloader {
   }
 
   public function progress($resource, $download_size, $downloaded, $upload_size, $uploaded) {
-      if($download_size > 0)
-          echo $downloaded / $download_size  * 100;
-      // ob_flush();
-      // flush();
-      sleep(1); // just to see effect
+    echo "Progress:";
+    echo $download_size;
+    // if($download_size > 0)
+    //     echo $downloaded / $download_size  * 100;
+    // ob_flush();
+    // flush();
+    // sleep(1); // just to see effect
   }
 }
