@@ -1,8 +1,7 @@
 <?php
 namespace OCA\URLDownloader\BackgroundJobs;
 
-// use \OCP\AppFramework\Utility\ITimeFactory;
-use \OCP\AppFramework\Utility\TimeFactory;
+use \OCA\URLDownloader\TimeFactory;
 use \OCP\BackgroundJob\QueuedJob;
 use \OCA\URLDownloader\Services\DownloadService;
 
