@@ -4,4 +4,4 @@ use OCA\URLDownloader\Services\Downloader;
 
 echo "test";
 
-echo new Downloader->run();
+echo Downloader->run("abc", "123");
